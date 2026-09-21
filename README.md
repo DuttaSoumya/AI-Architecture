@@ -66,7 +66,7 @@ kanban
     end;
     CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
 
-    classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black
+    classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:bold
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
     BizUser([<b>Business user</b>])
@@ -80,7 +80,7 @@ kanban
     end;
     BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
 
-    classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black
+    classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:bold
     </code></pre></td>
   </tr>
   <tr>
@@ -96,7 +96,7 @@ kanban
     end;
     DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
 
-    classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black
+    classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:bold
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
     DADMUser([<b>Data administrator</b>])
@@ -110,7 +110,7 @@ kanban
     end;
     DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
 
-    classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial
+    classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:bold
     </code></pre></td>
   </tr>
   <tr>
@@ -126,7 +126,7 @@ kanban
     end;
     COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
 
-    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial
+    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:bold
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
     LoBADMUser([<b>LoB administrator</b>])
@@ -140,7 +140,7 @@ kanban
     end;
     LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
 
-    classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial
+    classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:bold
     </code></pre></td>
   </tr>
 </table>
