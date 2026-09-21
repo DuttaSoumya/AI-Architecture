@@ -9,12 +9,6 @@ The focus therefore shifts towards "managing" this innovation and productivity b
 - [The conflicting reality](#the-conflicting-reality)
 - [The basic principles](#the-basic-principles)
     - [The stakeholders](#the-stakeholders-people-and-teams)
-        - [The citizen developer](#the-citizen-developer)
-        - [The business user](#the-business-user)
-        - [The data steward](#the-data-steward)
-        - [The AI Center of Excellence (AI-CoE)](#the-ai-center-of-excellence-ai-coe)
-        - [The data administrator](#the-data-administrator)
-        - [The line- of- business app administrator](#the-line--of--business-app-administrator)
     - [The core components](#the-core-components)
 - [A proposal](#a-proposal)
 
@@ -81,37 +75,8 @@ kanban
     classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black
     </code></pre></td>
   </tr>
-</table>
-
-#### The citizen developer
-``` mermaid
-flowchart
-    CitizenDev(["<b>Citizen developer</b>"])
-    class CitizenDev User_CTZ
-    CTZDesc@{ shape: "text", label: "The frontline worker who creates applications for individual or team use to increase productivity." }
-    CTZExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>Clear directions for the developer to follow so that the app thus created is safe, performs optimally and helps to boost productivity." }
-    CTZResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Create applications based on outlined best practices while taking appropriate approvals whenever required." }
-    CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
-
-    classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black
-```
-
-#### The business user
-``` mermaid
-flowchart
-    BizUser([<b>Business user</b>])
-    class BizUser User_BIZ
-    BIZDesc@{ shape: "text", label: "The business user who is going to use the app. This user is different than the citizen developer for apps created for a group of people." }
-    BIZExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>The app is easy to use and works well. In case of obvious inaccuracies, feedback may be provided to the app creator for improving it." }
-    BIZResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Recommendations from the AI application, if applicable, are always vetted by this person before any updates in the line of business apps." }
-    BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
-
-    classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black
-```
-
-#### The data steward
-``` mermaid
-flowchart
+  <tr>
+    <td><pre lang="mermaid"><code>flowchart
     DATAUser([<b>Data steward</b>])
     class DATAUser User_DATA
     DATADesc@{ shape: "text", label: "The data analysts for the data sources spread across line of business apps." }
@@ -120,24 +85,8 @@ flowchart
     DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
 
     classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black
-```
-
-#### The AI Center of Excellence (AI-CoE)
-``` mermaid
-flowchart
-    COEUser([<b>AI-CoE</b>])
-    class COEUser User_COE
-    COEDesc@{ shape: "text", label: "The team of people who together hold the responsibility of crafting and maintaining the company's AI Adoption strategy." }
-    COEExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>Following the best practices sufficiently safeguards the data from misuse by the AI app." }
-    COEResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
-    COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
-
-    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial
-```
-
-#### The data administrator
-``` mermaid
-flowchart
+    </code></pre></td>
+    <td><pre lang="mermaid"><code>flowchart
     DADMUser([<b>Data administrator</b>])
     class DADMUser User_DADM
     DADMDesc@{ shape: "text", label: "The data administrator sources directly exposed for consumption by an AI application." }
@@ -146,12 +95,20 @@ flowchart
     DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
 
     classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial
-    classDef User_BizAppAdm stroke:Magenta, fill:Magenta, color: White, font-family:Arial
-```
+    </code></pre></td>
+  </tr>
+  <tr>
+    <td><pre lang="mermaid"><code>flowchart
+    COEUser([<b>AI-CoE</b>])
+    class COEUser User_COE
+    COEDesc@{ shape: "text", label: "The team of people who together hold the responsibility of crafting and maintaining the company's AI Adoption strategy." }
+    COEExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>Following the best practices sufficiently safeguards the data from misuse by the AI app." }
+    COEResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+    COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
 
-#### The line- of- business app administrator
-``` mermaid
-flowchart
+    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial
+    </code></pre></td>
+    <td><pre lang="mermaid"><code>flowchart
     LoBADMUser([<b>LoB administrator</b>])
     class LoBADMUser User_LoBADM
     LoBADMDesc@{ shape: "text", label: "The administrator of the business apps used directly by business users to track activities inside the company." }
@@ -160,7 +117,9 @@ flowchart
     LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
 
     classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial
-```
+    </code></pre></td>
+  </tr>
+</table>
 
 ### The core components
 
