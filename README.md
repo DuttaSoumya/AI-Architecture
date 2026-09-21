@@ -58,8 +58,12 @@ kanban
     CitizenDev(["<b>Citizen developer</b>"])
     class CitizenDev User_CTZ
     CTZDesc@{ shape: "text", label: "The frontline worker who creates applications for individual or team use to increase productivity." }
-    CTZExpectation@{ shape: "rect", label: "<p>What the stakeholder expects?</p>Clear directions for the developer to follow so that the app thus created is safe, performs optimally and helps to boost productivity." }
-    CTZResponsibility@{ shape: "rect", label: "<p>What is expected from stakeholder?</p>Create applications based on outlined best practices while taking appropriate approvals whenever required." }
+    subgraph CTZExpectation[What the stakeholder expects?]
+        CTZExpectation_@{ shape: "rect", label: "Clear directions for the developer to follow so that the app thus created is safe, performs optimally and helps to boost productivity." }
+    end;
+    subgraph CTZResponsibility[What is expected from stakeholder?]
+        CTZResponsibility_@{ shape: "rect", label: "Create applications based on outlined best practices while taking appropriate approvals whenever required." }
+    end;
     CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
 
     classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black
