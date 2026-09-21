@@ -58,10 +58,10 @@ kanban
     CitizenDev(["<b>Citizen developer</b>"])
     class CitizenDev User_CTZ
     CTZDesc@{ shape: "text", label: "The frontline worker who creates applications for individual or team use to increase productivity." }
-    subgraph CTZExpectation[What the stakeholder expects?]
+    subgraph CTZExpectation["<b>What the stakeholder expects</b>"]
         CTZExpectation_@{ shape: "rect", label: "Clear directions for the developer to follow so that the app thus created is safe, performs optimally and helps to boost productivity." }
     end;
-    subgraph CTZResponsibility[What is expected from stakeholder?]
+    subgraph CTZResponsibility["<b>What is expected of stakeholder</b>"]
         CTZResponsibility_@{ shape: "rect", label: "Create applications based on outlined best practices while taking appropriate approvals whenever required." }
     end;
     CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
@@ -72,8 +72,12 @@ kanban
     BizUser([<b>Business user</b>])
     class BizUser User_BIZ
     BIZDesc@{ shape: "text", label: "The business user who is going to use the app. This user is different than the citizen developer for apps created for a group of people." }
-    BIZExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>The app is easy to use and works well. In case of obvious inaccuracies, feedback may be provided to the app creator for improving it." }
-    BIZResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Recommendations from the AI application, if applicable, are always vetted by this person before any updates in the line of business apps." }
+    subgraph BIZExpectation["<b>What the stakeholder expects</b>"]
+        BIZExpectation_@{ shape: "rect", label: "The app is easy to use and works well. In case of obvious inaccuracies, feedback may be provided to the app creator for improving it." }
+    end;
+    BIZResponsibility["<b>What is expected of stakeholder</b>"]
+        BIZResponsibility_@{ shape: "rect", label: "Recommendations from the AI application, if applicable, are always vetted by this person before any updates in the line of business apps." }
+    end;
     BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
 
     classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black
@@ -84,8 +88,12 @@ kanban
     DATAUser([<b>Data steward</b>])
     class DATAUser User_DATA
     DATADesc@{ shape: "text", label: "The data analysts for the data sources spread across line of business apps." }
-    DATAExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>Data classifications are adhered to when interacting with AI systems. Sensitive data never get leaked outside." }
-    DATAResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Understands the underlying data and provides input for classifying it into the right categories" }
+    DATAExpectation["<b>What the stakeholder expects</b>"]
+        @{ shape: "rect", label: "Data classifications are adhered to when interacting with AI systems. Sensitive data never get leaked outside." }
+    end;
+    DATAResponsibility["<b>What is expected of stakeholder</b>"]
+        DATAResponsibility_@{ shape: "rect", label: "Understands the underlying data and provides input for classifying it into the right categories" }
+    end;
     DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
 
     classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black
@@ -94,8 +102,12 @@ kanban
     DADMUser([<b>Data administrator</b>])
     class DADMUser User_DADM
     DADMDesc@{ shape: "text", label: "The data administrator sources directly exposed for consumption by an AI application." }
-    DADMExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>Following the best practices sufficiently safeguards the data from misuse by the AI app." }
-    DADMResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+    DADMExpectation["<b>What the stakeholder expects</b>"]
+        DADMExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
+    end;
+    DADMResponsibility["<b>What is expected of stakeholder</b>"]
+        DADMResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+    end;
     DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
 
     classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial
@@ -106,8 +118,12 @@ kanban
     COEUser([<b>AI-CoE</b>])
     class COEUser User_COE
     COEDesc@{ shape: "text", label: "The team of people who together hold the responsibility of crafting and maintaining the company's AI Adoption strategy." }
-    COEExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>Following the best practices sufficiently safeguards the data from misuse by the AI app." }
-    COEResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+    COEExpectation["<b>What the stakeholder expects</b>"]
+        COEExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
+    end;
+    COEResponsibility["<b>What is expected of stakeholder</b>"]
+        COEResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+    end;
     COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
 
     classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial
@@ -116,8 +132,12 @@ kanban
     LoBADMUser([<b>LoB administrator</b>])
     class LoBADMUser User_LoBADM
     LoBADMDesc@{ shape: "text", label: "The administrator of the business apps used directly by business users to track activities inside the company." }
-    LoBADMExpectation@{ shape: "rect", label: "<h3>What the stakeholder expects?</h3>User-level access controls configured in the app are respected even when the data leaves the system." }
-    LoBADMResponsibility@{ shape: "rect", label: "<h3>What is expected from stakeholder?</h3>Provide inputs for which data can be accessed by which user / role." }
+    LoBADMExpectation["<b>What the stakeholder expects</b>"]
+        LoBADMExpectation_@{ shape: "rect", label: "User-level access controls configured in the app are respected even when the data leaves the system." }
+    end;
+    LoBADMResponsibility["<b>What is expected of stakeholder</b>"]
+        LoBADMResponsibility_@{ shape: "rect", label: "Provide inputs for which data can be accessed by which user / role." }
+    end;
     LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
 
     classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial
