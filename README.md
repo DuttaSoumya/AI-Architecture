@@ -89,7 +89,7 @@ kanban
     class DATAUser User_DATA
     DATADesc@{ shape: "text", label: "The data analysts for the data sources spread across line of business apps." }
     DATAExpectation["<b>What the stakeholder expects</b>"]
-        @{ shape: "rect", label: "Data classifications are adhered to when interacting with AI systems. Sensitive data never get leaked outside." }
+        DATAExpectation_@{ shape: "rect", label: "Data classifications are adhered to when interacting with AI systems. Sensitive data never get leaked outside." }
     end;
     DATAResponsibility["<b>What is expected of stakeholder</b>"]
         DATAResponsibility_@{ shape: "rect", label: "Understands the underlying data and provides input for classifying it into the right categories" }
