@@ -8,7 +8,7 @@ The focus therefore shifts towards "managing" this innovation and productivity b
 - [The most common AI uses](#the-most-common-ai-uses)
 - [The conflicting reality](#the-conflicting-reality)
 - [The basic principles](#the-basic-principles)
-    - [The stakeholders](#the-stakeholders-people-and-teams)
+    - [The main stakeholders](#the-main-stakeholders)
     - [The core components](#the-core-components)
 - [A proposal](#a-proposal)
 
@@ -50,7 +50,7 @@ kanban
 * auditability and accountability
 * AI is a new beast- even the leaders appear unsure- so, no assumptions!
 
-### The stakeholders
+### The main stakeholders
 
 <table>
   <tr>
