@@ -44,6 +44,8 @@ kanban
 
 ## The main stakeholders
 
+The following table lays out the primary participants in the AI adoption strategy. While most of the stakeholders may be familiar, the AI- Center of Excellence (AI-CoE) team is new construct and may need to be formed in a matrixed way comprising of representatives from multiple functions.
+
 <table>
   <tr>
     <td><pre lang="mermaid"><code>flowchart
@@ -96,7 +98,7 @@ kanban
     <td><pre lang="mermaid"><code>flowchart
     DADMUser([Data administrator])
     class DADMUser User_DADM
-    DADMDesc@{ shape: "text", label: "The data administrator sources directly exposed for consumption by an AI application." }
+    DADMDesc@{ shape: "text", label: "The data administrator controls the data that is directly queried / exposed for consumption by an AI application." }
     subgraph DADMExpectation["What the stakeholder expects"]
         DADMExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
     end;
@@ -113,12 +115,12 @@ kanban
     <td><pre lang="mermaid"><code>flowchart
     COEUser([AI-CoE])
     class COEUser User_COE
-    COEDesc@{ shape: "text", label: "The team of people who together hold the responsibility of crafting and maintaining the company's AI Adoption strategy." }
+    COEDesc@{ shape: "text", label: "The team of people who together hold the responsibility of crafting and maintaining the company's AI Adoption strategy. This team is made of representatives from IT, Legal, Business, Cyber, Risk & Compliance etc." }
     subgraph COEExpectation["What the stakeholder expects"]
-        COEExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
+        COEExpectation_@{ shape: "rect", label: "The senior leadership will support the adoption of the governance approach proposed by the AI-CoE." }
     end;
     subgraph COEResponsibility["What is expected of stakeholder"]
-        COEResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+        COEResponsibility_@{ shape: "rect", label: "Formulate org- wide policies and build safeguards to use AI in a safe and efficient manner." }
     end;
 
     COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
