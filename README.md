@@ -1,4 +1,20 @@
 
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+
 # Creating an AI adoption strategy for an enterprise
 Artificial intelligence has already proven itself quite impactful in the way organizations operate today. Unlike prior technological advances, its **easy adoption**, **short time- to- value realization** and **versatility of application** are paving the way for citizen developers to create useful applications themselves. This empowers the business users who now automate workflows, easily add functionality atop their favorite applications, get targeted queries answered across multiple datasets almost instantaneously and on their own without the need for a traditional IT function. On one hand, this brings in flexibility and speed to the activities inside an organization, but on the other hand, it raises the risk of unmanaged data leaks and excessive expenses incurred because of unfettered usage.
 
@@ -46,7 +62,7 @@ kanban
 
 The following table lays out the primary participants in the AI adoption strategy. While most of the stakeholders may be familiar, the AI- Center of Excellence (AI-CoE) team may be a new construct and needs to be formed in a matrixed way comprising of representatives from multiple functions.
 
-<table cellspacing="0" cellpadding="0">
+<table>
   <tr>
     <td><pre lang="mermaid"><code>flowchart
     CitizenDev(["Citizen developer"])
