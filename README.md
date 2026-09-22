@@ -53,7 +53,7 @@ kanban
     subgraph CTZExpectation["What the stakeholder expects"]
         CTZExpectation_@{ shape: "rect", label: "Clear directions for the developer to follow so that the app thus created is safe, performs optimally and helps to boost productivity." }
     end;
-    subgraph CTZResponsibility["What is expected of stakeholder>"]
+    subgraph CTZResponsibility["What is expected of stakeholder"]
         CTZResponsibility_@{ shape: "rect", label: "Create applications based on outlined best practices while taking appropriate approvals whenever required." }
     end;
     class CTZExpectation,CTZResponsibility SubStyle
@@ -61,7 +61,7 @@ kanban
     CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
 
     classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:Bold
-    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:Bold
+    classDef SubStyle fill:#f0fdf4, stroke:#22c55e, stroke-width:2px, color:#166534, font-family:Fantasy, Trebuchet MS
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
     BizUser([Business user])
@@ -78,7 +78,7 @@ kanban
     BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
 
     classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:Bold
-    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:Bold
+    classDef SubStyle fill:#f0fdf4, stroke:#22c55e, stroke-width:2px, color:#166534, font-family:Fantasy, Trebuchet MS
     </code></pre></td>
   </tr>
   <tr>
@@ -97,7 +97,7 @@ kanban
     DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
 
     classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:Bold
-    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:Bold
+    classDef SubStyle fill:#f0fdf4, stroke:#22c55e, stroke-width:2px, color:#166534, font-family:Fantasy, Trebuchet MS
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
     DADMUser([Data administrator])
@@ -114,7 +114,7 @@ kanban
     DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
 
     classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:Bold
-    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:Bold
+    classDef SubStyle fill:#f0fdf4, stroke:#22c55e, stroke-width:2px, color:#166534, font-family:Fantasy, Trebuchet MS
     </code></pre></td>
   </tr>
   <tr>
@@ -133,7 +133,7 @@ kanban
     COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
 
     classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:Bold
-    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:Bold
+    classDef SubStyle fill:#f0fdf4, stroke:#22c55e, stroke-width:2px, color:#166534, font-family:Fantasy, Trebuchet MS
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
     LoBADMUser([LoB administrator])
@@ -150,7 +150,7 @@ kanban
     LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
 
     classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:Bold
-    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:Bold
+    classDef SubStyle fill:#f0fdf4, stroke:#22c55e, stroke-width:2px, color:#166534, font-family:Fantasy, Trebuchet MS
     </code></pre></td>
   </tr>
 </table>
