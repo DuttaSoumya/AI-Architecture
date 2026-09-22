@@ -60,7 +60,7 @@ kanban
 
     CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
 
-    classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:"Extra bold"
+    classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:"Bold"
     classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
@@ -77,7 +77,7 @@ kanban
 
     BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
 
-    classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:"Extra bold"
+    classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:"Bold"
     classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
     </code></pre></td>
   </tr>
@@ -96,7 +96,7 @@ kanban
     
     DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
 
-    classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:"Extra bold"
+    classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:"Bold"
     classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
@@ -113,7 +113,7 @@ kanban
 
     DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
 
-    classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:"Extra bold"
+    classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:"Bold"
     classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
     </code></pre></td>
   </tr>
@@ -132,7 +132,7 @@ kanban
 
     COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
 
-    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:"Extra bold"
+    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:"Bold"
     classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
     </code></pre></td>
     <td><pre lang="mermaid"><code>flowchart
@@ -149,7 +149,7 @@ kanban
 
     LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
 
-    classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:"Extra bold"
+    classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:"Bold"
     classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
     </code></pre></td>
   </tr>
