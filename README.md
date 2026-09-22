@@ -7,8 +7,8 @@ The focus therefore shifts towards "managing" this innovation and productivity b
 ##### Table of Contents  
 - [The most common AI uses](#the-most-common-ai-uses)
 - [The conflicting reality](#the-conflicting-reality)
+- [The main stakeholders](#the-main-stakeholders)
 - [The basic principles](#the-basic-principles)
-    - [The main stakeholders](#the-main-stakeholders)
     - [The core components](#the-core-components)
 - [A proposal](#a-proposal)
 
@@ -42,6 +42,119 @@ kanban
 * **Heterogenous application landscape**. There may be too many, and often duplicate, discrete systems that information lives in. Also, not all of them may be in the same state of readiness to safely extract data from.
 * **Unprepared for governance**. The IT function has reservations against unbridled use of tokens or leakage of sensitive company data (often intellectual property) to external models or even to unauthorized internal employees. Without sufficient guardrails, they may resist AI exposure.
 
+## The main stakeholders
+
+<table>
+  <tr>
+    <td><pre lang="mermaid"><code>flowchart
+    CitizenDev(["Citizen developer"])
+    class CitizenDev User_CTZ
+    CTZDesc@{ shape: "text", label: "The frontline worker who creates applications for individual or team use to increase productivity." }
+    subgraph CTZExpectation["What the stakeholder expects"]
+        CTZExpectation_@{ shape: "rect", label: "Clear directions for the developer to follow so that the app thus created is safe, performs optimally and helps to boost productivity." }
+    end;
+    subgraph CTZResponsibility["What is expected of stakeholder>"]
+        CTZResponsibility_@{ shape: "rect", label: "Create applications based on outlined best practices while taking appropriate approvals whenever required." }
+    end;
+    class CTZExpectation, CTZResponsibility SubStyle;
+
+    CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
+
+    classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:"Extra bold"
+    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
+    </code></pre></td>
+    <td><pre lang="mermaid"><code>flowchart
+    BizUser([Business user])
+    class BizUser User_BIZ
+    BIZDesc@{ shape: "text", label: "The business user who is going to use the app. This user is different than the citizen developer for apps created for a group of people." }
+    subgraph BIZExpectation["What the stakeholder expects"]
+        BIZExpectation_@{ shape: "rect", label: "The app is easy to use and works well. In case of obvious inaccuracies, feedback may be provided to the app creator for improving it." }
+    end;
+    subgraph BIZResponsibility["What is expected of stakeholder"]
+        BIZResponsibility_@{ shape: "rect", label: "Recommendations from the AI application, if applicable, are always vetted by this person before any updates in the line of business apps." }
+    end;
+    class BIZExpectation, BIZResponsibility SubStyle;
+
+    BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
+
+    classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:"Extra bold"
+    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
+    </code></pre></td>
+  </tr>
+  <tr>
+    <td><pre lang="mermaid"><code>flowchart
+    DATAUser([Data steward])
+    class DATAUser User_DATA
+    DATADesc@{ shape: "text", label: "The data analysts for the data sources spread across line of business apps." }
+    subgraph DATAExpectation["What the stakeholder expects"]
+        DATAExpectation_@{ shape: "rect", label: "Data classifications are adhered to when interacting with AI systems. Sensitive data never get leaked outside." }
+    end;
+    subgraph DATAResponsibility["What is expected of stakeholder"]
+        DATAResponsibility_@{ shape: "rect", label: "Understands the underlying data and provides input for classifying it into the right categories" }
+    end;
+    class DATAExpectation, DATAResponsibility SubStyle;
+
+    DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
+
+    classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:"Extra bold"
+    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
+    </code></pre></td>
+    <td><pre lang="mermaid"><code>flowchart
+    DADMUser([Data administrator])
+    class DADMUser User_DADM
+    DADMDesc@{ shape: "text", label: "The data administrator sources directly exposed for consumption by an AI application." }
+    subgraph DADMExpectation["What the stakeholder expects"]
+        DADMExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
+    end;
+    subgraph DADMResponsibility["What is expected of stakeholder"]
+        DADMResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+    end;
+    class DADMExpectation, DADMResponsibility SubStyle;
+
+    DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
+
+    classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:"Extra bold"
+    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
+    </code></pre></td>
+  </tr>
+  <tr>
+    <td><pre lang="mermaid"><code>flowchart
+    COEUser([AI-CoE])
+    class COEUser User_COE
+    COEDesc@{ shape: "text", label: "The team of people who together hold the responsibility of crafting and maintaining the company's AI Adoption strategy." }
+    subgraph COEExpectation["What the stakeholder expects"]
+        COEExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
+    end;
+    subgraph COEResponsibility["What is expected of stakeholder"]
+        COEResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
+    end;
+    class COEExpectation, COEResponsibility SubStyle;
+
+    COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
+
+    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:"Extra bold"
+    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
+    </code></pre></td>
+    <td><pre lang="mermaid"><code>flowchart
+    LoBADMUser([LoB administrator])
+    class LoBADMUser User_LoBADM
+    LoBADMDesc@{ shape: "text", label: "The administrator of the business apps used directly by business users to track activities inside the company." }
+    subgraph LoBADMExpectation["What the stakeholder expects"]
+        LoBADMExpectation_@{ shape: "rect", label: "User-level access controls configured in the app are respected even when the data leaves the system." }
+    end;
+    subgraph LoBADMResponsibility["What is expected of stakeholder"]
+        LoBADMResponsibility_@{ shape: "rect", label: "Provide inputs for which data can be accessed by which user / role." }
+    end;
+    class LoBADMExpectation, LoBADMResponsibility SubStyle;
+
+    LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
+
+    classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:"Extra bold"
+    classDef SubStyle fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534, font-weight:"Bold"
+    </code></pre></td>
+  </tr>
+</table>
+
 ## The basic principles
 * data governance
 * token usage
@@ -50,100 +163,6 @@ kanban
 * auditability and accountability
 * AI is a new beast- even the leaders appear unsure- so, no assumptions!
 
-### The main stakeholders
-
-<table>
-  <tr>
-    <td><pre lang="mermaid"><code>flowchart
-    CitizenDev(["<b>Citizen developer</b>"])
-    class CitizenDev User_CTZ
-    CTZDesc@{ shape: "text", label: "The frontline worker who creates applications for individual or team use to increase productivity." }
-    subgraph CTZExpectation["<b>What the stakeholder expects</b>"]
-        CTZExpectation_@{ shape: "rect", label: "Clear directions for the developer to follow so that the app thus created is safe, performs optimally and helps to boost productivity." }
-    end;
-    subgraph CTZResponsibility["<b>What is expected of stakeholder</b>"]
-        CTZResponsibility_@{ shape: "rect", label: "Create applications based on outlined best practices while taking appropriate approvals whenever required." }
-    end;
-    CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
-
-    classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:bold
-    </code></pre></td>
-    <td><pre lang="mermaid"><code>flowchart
-    BizUser([<b>Business user</b>])
-    class BizUser User_BIZ
-    BIZDesc@{ shape: "text", label: "The business user who is going to use the app. This user is different than the citizen developer for apps created for a group of people." }
-    subgraph BIZExpectation["<b>What the stakeholder expects</b>"]
-        BIZExpectation_@{ shape: "rect", label: "The app is easy to use and works well. In case of obvious inaccuracies, feedback may be provided to the app creator for improving it." }
-    end;
-    subgraph BIZResponsibility["<b>What is expected of stakeholder</b>"]
-        BIZResponsibility_@{ shape: "rect", label: "Recommendations from the AI application, if applicable, are always vetted by this person before any updates in the line of business apps." }
-    end;
-    BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
-
-    classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:bold
-    </code></pre></td>
-  </tr>
-  <tr>
-    <td><pre lang="mermaid"><code>flowchart
-    DATAUser([<b>Data steward</b>])
-    class DATAUser User_DATA
-    DATADesc@{ shape: "text", label: "The data analysts for the data sources spread across line of business apps." }
-    subgraph DATAExpectation["<b>What the stakeholder expects</b>"]
-        DATAExpectation_@{ shape: "rect", label: "Data classifications are adhered to when interacting with AI systems. Sensitive data never get leaked outside." }
-    end;
-    subgraph DATAResponsibility["<b>What is expected of stakeholder</b>"]
-        DATAResponsibility_@{ shape: "rect", label: "Understands the underlying data and provides input for classifying it into the right categories" }
-    end;
-    DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
-
-    classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:bold
-    </code></pre></td>
-    <td><pre lang="mermaid"><code>flowchart
-    DADMUser([<b>Data administrator</b>])
-    class DADMUser User_DADM
-    DADMDesc@{ shape: "text", label: "The data administrator sources directly exposed for consumption by an AI application." }
-    subgraph DADMExpectation["<b>What the stakeholder expects</b>"]
-        DADMExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
-    end;
-    subgraph DADMResponsibility["<b>What is expected of stakeholder</b>"]
-        DADMResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
-    end;
-    DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
-
-    classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:bold
-    </code></pre></td>
-  </tr>
-  <tr>
-    <td><pre lang="mermaid"><code>flowchart
-    COEUser([<b>AI-CoE</b>])
-    class COEUser User_COE
-    COEDesc@{ shape: "text", label: "The team of people who together hold the responsibility of crafting and maintaining the company's AI Adoption strategy." }
-    subgraph COEExpectation["<b>What the stakeholder expects</b>"]
-        COEExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
-    end;
-    subgraph COEResponsibility["<b>What is expected of stakeholder</b>"]
-        COEResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
-    end;
-    COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
-
-    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:bold
-    </code></pre></td>
-    <td><pre lang="mermaid"><code>flowchart
-    LoBADMUser([<b>LoB administrator</b>])
-    class LoBADMUser User_LoBADM
-    LoBADMDesc@{ shape: "text", label: "The administrator of the business apps used directly by business users to track activities inside the company." }
-    subgraph LoBADMExpectation["<b>What the stakeholder expects</b>"]
-        LoBADMExpectation_@{ shape: "rect", label: "User-level access controls configured in the app are respected even when the data leaves the system." }
-    end;
-    subgraph LoBADMResponsibility["<b>What is expected of stakeholder</b>"]
-        LoBADMResponsibility_@{ shape: "rect", label: "Provide inputs for which data can be accessed by which user / role." }
-    end;
-    LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
-
-    classDef User_LoBADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:bold
-    </code></pre></td>
-  </tr>
-</table>
 
 ### The core components
 
