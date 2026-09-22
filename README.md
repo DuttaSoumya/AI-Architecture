@@ -56,7 +56,7 @@ kanban
     subgraph CTZResponsibility["What is expected of stakeholder>"]
         CTZResponsibility_@{ shape: "rect", label: "Create applications based on outlined best practices while taking appropriate approvals whenever required." }
     end;
-    class CTZExpectation, CTZResponsibility SubStyle
+    class CTZExpectation,CTZResponsibility SubStyle
 
     CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
 
@@ -73,7 +73,7 @@ kanban
     subgraph BIZResponsibility["What is expected of stakeholder"]
         BIZResponsibility_@{ shape: "rect", label: "Recommendations from the AI application, if applicable, are always vetted by this person before any updates in the line of business apps." }
     end;
-    class BIZExpectation, BIZResponsibility SubStyle
+    class BIZExpectation,BIZResponsibility SubStyle
 
     BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
 
@@ -92,8 +92,8 @@ kanban
     subgraph DATAResponsibility["What is expected of stakeholder"]
         DATAResponsibility_@{ shape: "rect", label: "Understands the underlying data and provides input for classifying it into the right categories" }
     end;
-    class DATAExpectation, DATAResponsibility SubStyle
-
+    class DATAExpectation,DATAResponsibility SubStyle
+    
     DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
 
     classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:"Extra bold"
@@ -109,7 +109,7 @@ kanban
     subgraph DADMResponsibility["What is expected of stakeholder"]
         DADMResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
     end;
-    class DADMExpectation, DADMResponsibility SubStyle
+    class DADMExpectation,DADMResponsibility SubStyle
 
     DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
 
@@ -128,7 +128,7 @@ kanban
     subgraph COEResponsibility["What is expected of stakeholder"]
         COEResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
     end;
-    class COEExpectation, COEResponsibility SubStyle
+    class COEExpectation,COEResponsibility SubStyle
 
     COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
 
@@ -145,7 +145,7 @@ kanban
     subgraph LoBADMResponsibility["What is expected of stakeholder"]
         LoBADMResponsibility_@{ shape: "rect", label: "Provide inputs for which data can be accessed by which user / role." }
     end;
-    class LoBADMExpectation, LoBADMResponsibility SubStyle
+    class LoBADMExpectation,LoBADMResponsibility SubStyle
 
     LoBADMUser & LoBADMDesc ~~~ LoBADMExpectation & LoBADMResponsibility
 
