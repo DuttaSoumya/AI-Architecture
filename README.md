@@ -218,8 +218,8 @@ flowchart
 
             DataClassifications@{ shape: cyl, label: "Data classifications" }
             class DataClassifications Database
-            SnowflakeAccessControl@{ shape: cyl, label: "Access control" }
-            class SnowflakeAccessControl Database
+            DGAccessControl@{ shape: cyl, label: "Access control" }
+            class DGAccessControl Database
 
             DataCatalog@{ shape: doc, label: "Catalog of data exposed" }
             class DataCatalog AiArtifacts
@@ -228,7 +228,7 @@ flowchart
             class DataLlmSuite AiArtifacts
 
             DataAdmin -- configures --> DataClassifications
-            DataAdmin -- configures --> SnowflakeAccessControl 
+            DataAdmin -- configures --> DGAccessControl 
             DataStewards -. provides inputs .-> DataClassifications
         end
         style GoldenSystemOfRecord color:blue, font-family:Fantasy, Trebuchet MS
@@ -402,17 +402,10 @@ flowchart
 ```
 
 ## The full architecture
-Let us combine the stakeholders, the components and the principles dervied together in a unified architecture.
+Let us combine the stakeholders, the components and the principles dervied together in a unified diagram so that all interactions become visible.
 
 ``` mermaid
-flowchart
-    CitizenDev([Citizen developer])
-    class CitizenDev User_CTZ
-    BizUser([Business user])
-    class BizUser User_BIZ
-    CoE([AI-CoE])
-    class CoE User_COE
-
+flowchart 
     subgraph Legend[**LEGEND**]
         direction TB
         AiArtifact@{ shape: doc, label: "Public knowledge base artifact" }
@@ -428,6 +421,13 @@ flowchart
     end;
     style Legend stroke:Black, stroke-width: 5px, fill:None, color:blue, font-family:Fantasy, Trebuchet MS
 
+    CitizenDev([Citizen developer])
+    class CitizenDev User_CTZ
+    BizUser([Business user])
+    class BizUser User_BIZ
+    CoE([AI-CoE])
+    class CoE User_COE
+
     subgraph CompanyData[Organization data]
         subgraph GoldenSystemOfRecord[Data gateway]
             DataStewards(["Data steward"])
@@ -437,8 +437,8 @@ flowchart
 
             DataClassifications@{ shape: cyl, label: "Data classifications" }
             class DataClassifications Database
-            SnowflakeAccessControl@{ shape: cyl, label: "Access control" }
-            class SnowflakeAccessControl Database
+            DGAccessControl@{ shape: cyl, label: "Access control" }
+            class DGAccessControl Database
 
             DataCatalog@{ shape: doc, label: "Catalog of data exposed" }
             class DataCatalog AiArtifacts
@@ -447,7 +447,7 @@ flowchart
             class DataLlmSuite AiArtifacts
 
             DataAdmin -- configures --> DataClassifications
-            DataAdmin -- configures --> SnowflakeAccessControl 
+            DataAdmin -- configures --> DGAccessControl 
             DataStewards -. provides inputs .-> DataClassifications
         end
         style GoldenSystemOfRecord color:blue, font-family:Fantasy, Trebuchet MS
@@ -509,6 +509,7 @@ flowchart
         BestPractices@{ shape: doc, label: "Best practices for AI projects, architecture, etc." }
         class BestPractices AiArtifacts
 
+        VibeCodedApp & LLMProj -- must update managed App? --> MustUpdateManagedApp -- Business user has approved changes to be made? (Human- in- the- loop) --> UpdateApprovedByUser
         AppCatalog -. references .-> BestPractices
         Apps -- saves to --> SourceControl
     end;
@@ -566,6 +567,7 @@ flowchart
 
     GoldenSystemOfRecord -- securely provides data based on the app user's credential --> AIProject
     DataClassifications -- dictates --> RedactPolicies
+    SoRAccessControl -- dictates --> DGAccessControl
     UnmanagedData -- **RISKY! NOT IT SUPPORTED.** --> LLMProj
     DataLlmSuite <-. interacts, for sensitive data .-> InternalModel
 
