@@ -5,17 +5,20 @@ Artificial intelligence has already proven itself quite impactful in the way org
 The focus therefore shifts towards "managing" this innovation and productivity boom so that an organization can encourage greater adoption of AI while being confident about preventing any potential misuse. This article summarizes the considerations that must be applied when creating an AI adoption strategy while anticipating and overcoming the unexpected gotchas in a fairly- sized enterprise. 
 
 ##### Table of Contents  
-- [The most common AI uses](#the-most-common-ai-uses)
+- [Common AI uses](#common-ai-uses)
 - [The conflicting reality](#the-conflicting-reality)
 - [The main stakeholders](#the-main-stakeholders)
 - [The basic principles (or rules)](#the-basic-principles-or-rules)
+    - [Data governance](#data-governance)
+    - [App lifecycle](#app-lifecycle)
+    - [AI governance](#ai-governance)
 - [The core components](#the-core-components)
     - [Organization data](#organization-data)
     - [AI project hub](#ai-project-hub)
     - [AI gateway](#ai-gateway)
 - [The full architecture](#the-full-architecture)
 
-## The most common AI uses
+## Common AI uses
 Artificial intelligence is advancing at an ever- accelerating pace and break- through innovations in their capability are almost a staple of everyday news headlines. However if we consider the most rudimentary uses for AI, only a few distinct categories emerge. Note that real- world AI applications may often fall into more than one category mentioned here. 
 
 | Category | Author | Purpose | Example | Included in the AI adoption strategy |
@@ -101,7 +104,7 @@ The following table lays out the primary participants in the AI adoption strateg
     <td><pre lang="mermaid"><code>flowchart
     DADMUser([Data administrator])
     class DADMUser User_DADM
-    DADMDesc@{ shape: "text", label: "The data administrator controls the data that is directly queried / exposed for consumption by an AI application." }
+    DADMDesc@{ shape: "text", label: "The data administrator controls the data that is directly queried/ exposed for consumption by an AI application." }
     subgraph DADMExpectation["What the stakeholder expects"]
         DADMExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
     end;
@@ -138,7 +141,7 @@ The following table lays out the primary participants in the AI adoption strateg
         SoRADMExpectation_@{ shape: "rect", label: "User-level access controls configured in the app are respected even when the data leaves the system." }
     end;
     subgraph SoRADMResponsibility["What is expected of the stakeholder"]
-        SoRADMResponsibility_@{ shape: "rect", label: "Provide inputs for which data can be accessed by which user / role." }
+        SoRADMResponsibility_@{ shape: "rect", label: "Provide inputs for which data can be accessed by which user/ role." }
     end;
 
     SoRADMUser & SoRADMDesc ~~~ SoRADMExpectation & SoRADMResponsibility
@@ -155,7 +158,7 @@ Let us enlist the simplest principles here which will drive how the AI adoption 
 ### Data governance
 * **Data- gateway**. It is difficult to manage a large number of AI apps having access to multiple scattered applications in a fragmented landscape, so a managed centralized data channel is preferable. It either pulls such data from the original systems on- demand or keeps the data replicated internally at an acceptable periodic cadence. Some other benefits that follow from this approach are,
     - Similar SoR applications may be consolidated into a single [star-schema concept](https://en.wikipedia.org/wiki/Star_schema) which is universally understood by the organization. Transformations used to achieve this can be re-used multiple times instead of each app being concerned about it when interacting with individual apps
-    - Many modern SaaS applications place limitations on the number of direct (Api / OData) calls to query data. Such limitations may be bypassed by actually replicating the data inside the data- gateway.
+    - Many modern SaaS applications place limitations on the number of direct (Api/ OData) calls to query data. Such limitations may be bypassed by actually replicating the data inside the data- gateway.
     - Older applications may lack the esssential security infrastructure that inspires confidence when exposing them to AI
 * **At- rest data access control**. Requests for data made to the gateway are served only if the access to the requestor is also granted to the original data source, thus user access controls in the original data sources are replicated at the gateway. 
 * **Privacy**. A data- gateway is required to maintain the same classification of data sensitivity as the original application. The organization maintains certain data points to be sensitive to its business and requires that sensitive data like this are omitted or redacted when interacting with AI apps communicating with external LLMs. 
@@ -198,11 +201,12 @@ Let us enlist the simplest principles here which will drive how the AI adoption 
 The core components in an AI adoption strategy may then be classified into the following groups.
 
 ### Organization data
-* Organization data can be classified into 3 categories
-    1. **Managed SoR apps**. Managed system of record (SoR) apps like ERP, CRM, pricing systems etc. These are usually structured into relational data and such systems are usually maintained by the IT.
-    1. **Unstructured**. There could be files shares having unstructured data like data lakes or file shares.
-    1. **Unmanaged**. This category refers to data handled by indivudual users, like private mailboxes, private dumps of data taken from either of the other 2 categories. We rely solely on user discretion to not share such data to external parties. As a result they are the least preferred way of sharing data with AI apps.
-* All of the data is held behind the data- gateway to prevent direct exposure to agents / AI apps.
+Organization data can be classified into 3 categories
+1. **Managed SoR apps**. Managed system of record (SoR) apps like ERP, CRM, pricing systems etc. These are usually structured into relational data and such systems are usually maintained by the IT.
+1. **Unstructured**. There could be files shares having unstructured data like data lakes or file shares.
+1. **Unmanaged**. This category refers to data handled by indivudual users, like private mailboxes, private dumps of data taken from either of the other 2 categories. We rely solely on user discretion to not share such data to external parties. As a result they are the least preferred way of sharing data with AI apps.
+
+All of the data is held behind the data- gateway to prevent direct exposure to AI apps or agents.
 
 ``` mermaid
 flowchart
@@ -270,17 +274,25 @@ flowchart
     end
     style CompanyData stroke:None, fill:#f7e0c6, color:blue, font-family:Fantasy, Trebuchet MS
 
+    AiApp@{ shape: doc, label: "**AI apps/ agents**" }
+    class AiApp AiApps
+
     BizUser -- maintains --> UnmanagedData
+    GoldenSystemOfRecord -- fetches data --> AiApp
 
     classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:Bold
     classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:Bold
     classDef User_SoRADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:Bold
     classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:Bold
     classDef AiArtifacts stroke: Black, fill: Red, color: White, font-family: Arial, font-weight: bold, text-align:justify, text-justify:inter-word
+    classDef AiApps stroke: Blue, fill: Blue, color: White, font-family: Arial, font-weight: bold, text-align:justify, text-justify:inter-word
     classDef Database stroke: Brown, stroke-width: 3px, text-align:justify, text-justify:inter-word
 ```
 
 ### AI project hub
+The project hub is the collection of all apps and agents built by the citizen developer and addressing the different types of [use cases](#common-ai-uses) as explained previously. Having these collected in a single repository helps in applying the governance uniformly. The following diagram describes
+- the interactions of the business users and citizen developers, and
+- the artifacts in the public domain that inspire developers to create new apps and improve existing ones.
 ``` mermaid
 flowchart
     CitizenDev([Citizen developer])
@@ -291,7 +303,7 @@ flowchart
     class CoE User_COE
 
     subgraph AIProject[AI Project hub]
-        subgraph Apps[AI apps]
+        subgraph Apps[AI apps/ agents]
             VibeCodedApp@{ shape: doc, label: "**Vibe- coded app**" }
             class VibeCodedApp AiApps
             LLMProj@{ shape: doc, label: "**Generative AI**" }
@@ -299,6 +311,7 @@ flowchart
             Chatbot@{ shape: doc, label: "**Chatbot**" }
             class Chatbot AiApps
         end;
+        style Apps color:blue, font-family:Fantasy, Trebuchet MS
         AppCatalog@{ shape: doc, label: "Catalog of projects, illustrations of how best practices have been applied." }
         class AppCatalog AiArtifacts
         AppMetrics@{ shape: doc, label: "Dashboard of usage of apps and user confidence in it, based on evals being logged." }
@@ -337,6 +350,7 @@ flowchart
 ```
 
 ### AI gateway
+The apps or agents using generative AI require to be managed to control the data churned by the external models and also the expense incurred out of token usage. In addition, all calls are to be logged so the interactions can be audited. Such logs can also function as a test bed for future improvements to the apps.
 ``` mermaid
 flowchart
     BizUser([Business user])
@@ -345,7 +359,7 @@ flowchart
     class CoE User_COE
 
     subgraph AIGateway[AI gateway]
-        TokenGovernance@{ shape: cyl, label: "Token / AI credits governance" }
+        TokenGovernance@{ shape: cyl, label: "Token/ AI credits governance" }
         class TokenGovernance Database
         RedactPolicies@{ shape: cyl, label: "Data redaction or omission policies" }
         class RedactPolicies Database
@@ -386,10 +400,12 @@ flowchart
     class LLMProj AiApps
     LLMProj -- External LLM needed? --> ExternalLLMApproved
 
+    BizUser ~~~ CoE
+
     CoE -- configures --> TokenGovernance
     CoE -- configures --> ApprovalsForExternalLlms
     CoE -- maintains --> InternalModel
-    CoE -- routinely checks for low user satisfaction and continually improves --> CallLogAsEvals
+    CoE -- routinely checks for low user satisfaction and facilitates app improvement or retirement --> CallLogAsEvals
 
     BizUser -. gives feedback for the AI suggestion .-> GathersUserFeedback
 
@@ -402,7 +418,7 @@ flowchart
 ```
 
 ## The full architecture
-Let us combine the stakeholders, the components and the principles dervied together in a unified diagram so that all interactions become visible.
+Let us combine the stakeholders, the components and the principles dervied together in a unified diagram so that all interactions become visible. The natural next steps is to evaluate your organization readiness for each node and edge in this diagram and there after make a plan of action for the missing parts. 
 
 ``` mermaid
 flowchart 
@@ -410,9 +426,9 @@ flowchart
         direction TB
         AiArtifact@{ shape: doc, label: "Public knowledge base artifact" }
         class AiArtifact AiArtifacts
-        AiApp@{ shape: doc, label: "AI app / agent. See <a href="#the-most-common-ai-uses">use cases</a>" }
+        AiApp@{ shape: doc, label: "AI app/ agent. See <a href="#the-most-common-ai-uses">use cases</a>" }
         class AiApp AiApps
-        Team(["User / team"])
+        Team(["User/ team"])
         Database@{ shape: cyl, label: "Data participating directly in the AI architecture" }
         class Database Database
         subgraph Component[ ]
@@ -490,7 +506,7 @@ flowchart
     style CompanyData stroke:None, fill:#f7e0c6, color:blue, font-family:Fantasy, Trebuchet MS
 
     subgraph AIProject[AI Project hub]
-        subgraph Apps[AI apps]
+        subgraph Apps[AI apps/ agents]
             VibeCodedApp@{ shape: doc, label: "**Vibe- coded app**" }
             class VibeCodedApp AiApps
             LLMProj@{ shape: doc, label: "**Generative AI**" }
@@ -498,6 +514,7 @@ flowchart
             Chatbot@{ shape: doc, label: "**Chatbot**" }
             class Chatbot AiApps
         end;
+        style Apps color:blue, font-family:Fantasy, Trebuchet MS
         AppCatalog@{ shape: doc, label: "Catalog of projects, illustrations of how best practices have been applied." }
         class AppCatalog AiArtifacts
         AppMetrics@{ shape: doc, label: "Dashboard of usage of apps and user confidence in it, based on evals being logged." }
@@ -516,7 +533,7 @@ flowchart
     style AIProject stroke:None, fill:#ebfcfc, color:blue, font-family:Fantasy, Trebuchet MS
 
     subgraph AIGateway[AI gateway]
-        TokenGovernance@{ shape: cyl, label: "Token / AI credits governance" }
+        TokenGovernance@{ shape: cyl, label: "Token/ AI credits governance" }
         class TokenGovernance Database
         RedactPolicies@{ shape: cyl, label: "Data redaction or omission policies" }
         class RedactPolicies Database
@@ -568,7 +585,7 @@ flowchart
     GoldenSystemOfRecord -- securely provides data based on the app user's credential --> AIProject
     DataClassifications -- dictates --> RedactPolicies
     SoRAccessControl -- dictates --> DGAccessControl
-    UnmanagedData -- **RISKY! NOT IT SUPPORTED.** --> LLMProj
+    UnmanagedData -- <b>RISKY! NOT IT SUPPORTED.</b> --> LLMProj
     DataLlmSuite <-. interacts, for sensitive data .-> InternalModel
 
     UpdateApprovedByUser -- yes. Perform update using app user's credentials to support auditability. This part of the app may require review by IT. --> Organized
@@ -577,7 +594,7 @@ flowchart
 
     BizUser -- calls or uses application --> Apps 
     BizUser -- maintains --> UnmanagedData
-    LLMProj -- **RISKY! NOT IT SUPPORTED.** --> ExternalModel
+    LLMProj -- <b>RISKY! NOT IT SUPPORTED.</b> --> ExternalModel
     GoldenSystemOfRecord -. incremental updates to keep internal LLM in sync .-> InternalModel
     LLMProj -- Yes. External LLM needed? --> ExternalLLMApproved
     AppMetrics -. pulls data from .-> CallLogAsEvals
@@ -588,7 +605,7 @@ flowchart
     CoE -- configures --> ApprovalsForExternalLlms
     CoE -- maintains --> InternalModel
     CoE -- maintains and enriches --> BestPractices
-    CoE -- routinely checks for low user satisfaction and continually improves --> CallLogAsEvals
+    CoE -- routinely checks for low user satisfaction and facilitates app improvement or retirement --> CallLogAsEvals
     CoE -- maintains --> AppMetrics 
     CoE -- maintains infrastructure of --> SourceControl
 
