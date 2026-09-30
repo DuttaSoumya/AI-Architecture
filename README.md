@@ -44,13 +44,13 @@ As may be seen from the use cases above, deriving the true value from AI require
 
 The following table lays out the primary participants in the AI adoption strategy. While most of the stakeholders may be familiar, the AI- Center of Excellence (AI-CoE) team may be a new construct and needs to be formed in a matrixed way comprising of representatives from multiple functions.
 
-<table cellspacing="0" cellpadding="0">
-  <tr>
-    <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" /></td>
-    <td><img src=".assets/User_BusinessUser.svg" alt="Business user" /></td>
+<table cellspacing="0" cellpadding="0" width="100%">
+  <tr width="100%">
+    <td width="50%"><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" /></td>
+    <td width="50%"><img src=".assets/User_BusinessUser.svg" alt="Business user" /></td>
   </tr>
-  <tr>
-    <td><pre lang="mermaid"><code>flowchart
+  <tr width="100%">
+    <td width="50%"><pre lang="mermaid"><code>flowchart
     DATAUser([Data steward])
     class DATAUser User_DATA
     DATADesc@{ shape: "text", label: "The data analysts for the data sources spread across system of record apps. They could be either from business or from IT functions." }
@@ -65,7 +65,7 @@ The following table lays out the primary participants in the AI adoption strateg
 
     classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:Bold
     </code></pre></td>
-    <td><pre lang="mermaid"><code>flowchart
+    <td width="50%"><pre lang="mermaid"><code>flowchart
     DADMUser([Data administrator])
     class DADMUser User_DADM
     DADMDesc@{ shape: "text", label: "The data administrator controls the data that is directly queried/ exposed for consumption by an AI application." }
@@ -81,8 +81,8 @@ The following table lays out the primary participants in the AI adoption strateg
     classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:Bold
     </code></pre></td>
   </tr>
-  <tr>
-    <td><pre lang="mermaid"><code>flowchart
+  <tr width="100%">
+    <td width="50%"><pre lang="mermaid"><code>flowchart
     COEUser([AI-CoE])
     class COEUser User_COE
     COEDesc@{ shape: "text", label: "The team that is responsible to craft and maintain the company's AI Adoption strategy. They also monitor value realization from past projects and accordingly update best practices. This team is made of representatives from IT, Legal, Business, Cybersecurity, Risk & Compliance etc." }
@@ -97,7 +97,7 @@ The following table lays out the primary participants in the AI adoption strateg
 
     classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:Bold
     </code></pre></td>
-    <td><pre lang="mermaid"><code>flowchart
+    <td width="50%"><pre lang="mermaid"><code>flowchart
     SoRADMUser([SoR administrator])
     class SoRADMUser User_SoRADM
     SoRADMDesc@{ shape: "text", label: "The administrator (typically, in the IT function) of the business apps, typically System of Records, used directly by business users to track activities inside the company." }
