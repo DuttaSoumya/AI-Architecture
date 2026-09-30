@@ -54,7 +54,7 @@ The following table lays out the primary participants in the AI adoption strateg
 
 <table cellspacing="0" cellpadding="0">
   <tr>
-    <td>![](.assets/User_CitizenDeveloper.svg)</td>
+    <td>![BizUser](/.assets/User_CitizenDeveloper.png "Citizen developer")</td>
     <td><pre lang="mermaid"><code>flowchart
     BizUser([Business user])
     class BizUser User_BIZ
