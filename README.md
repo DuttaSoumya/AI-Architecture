@@ -91,7 +91,7 @@ Let us list out the simplest set of principles which will drive how the AI adopt
 * **App usage**. The AI-CoE publishes a dashboard of the app usage to be consumed by the owning business teams. If an app loses users, either the app is improved to make it more appealing or it is inactivated to prevent further organization expense. Active monitoring becomes especially relevant as there are [studies](https://medium.com/@Fransantolo/95-of-corporate-generative-ai-projects-fail-mit-study-finds-47ad5d50db32) that show that AI apps look great during demos, but lose their charm over time. Here are some examples of the data that should be available on the dashboard,
     - `Invocations`. Number of times app has been invoked in a month
     - `Universality`. Number of _different_ users that have used the app in a month
-    - `Value`. How much value is it providing to the business users. Do users often have to dramatically alter the suggestions made by the AI app?
+    - `Trust`. Do business users trust the output? Or do they have to often dramatically alter the suggestions made by the AI app?
     - `Cost`. How much is the app costing the organization in terms of token or AI credit usage?
     
     These metrics help in quantifying the "value added" by the app to the organization.
