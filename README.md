@@ -33,7 +33,7 @@ Artificial intelligence is advancing at an ever- accelerating pace. Break- throu
 ## The conflicting reality
 As may be seen from the use cases above, deriving the true value from AI requires it to first assimilate facts from a wide range of data sources as well as sufficiently large samples of data in those sources, eventually yielding results that are holistic in nature. If an organization has not yet created an AI adoption strategy, it is likely that they are yet to strike the right balance between conflicting forces that push them to either adopt AI or exercise caution against it. 
 
-<img src=".assets/ConflictingReality.svg" alt="Conflicting Reality" />
+<img src=".assets/ConflictingReality.svg" alt="Conflicting Reality" width="50%" height="50%"/>
 
 * **Leadership push**. The senior management are coerced by their shareholders to demonstrate "competitiveness" or adopt a more "tech- embracing attitude" with respect to their peers. 
 * **Enthusiastic citizen developers**. Frontline workers in the business have had a positive experience with AI and are raring to create or use even more tools to enhance their productivity. 
