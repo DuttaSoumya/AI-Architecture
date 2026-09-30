@@ -54,8 +54,8 @@ The following table lays out the primary participants in the AI adoption strateg
 
 <table cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" width="50%" height="50%"/></td>
-    <td><img src=".assets/User_BusinessUser.svg" alt="Business user" width="50%" height="50%"/></td>
+    <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" width="100%" height="100%"/></td>
+    <td><img src=".assets/User_BusinessUser.svg" alt="Business user" width="100%" height="100%"/></td>
   </tr>
   <tr>
     <td><pre lang="mermaid"><code>flowchart
