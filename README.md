@@ -50,68 +50,12 @@ The following table lays out the primary participants in the AI adoption strateg
     <td width="50%"><img src=".assets/User_BusinessUser.svg" alt="Business user" /></td>
   </tr>
   <tr width="100%">
-    <td width="50%"><pre lang="mermaid"><code>flowchart
-    DATAUser([Data steward])
-    class DATAUser User_DATA
-    DATADesc@{ shape: "text", label: "The data analysts for the data sources spread across system of record apps. They could be either from business or from IT functions." }
-    subgraph DATAExpectation["What the stakeholder expects"]
-        DATAExpectation_@{ shape: "rect", label: "Data classifications are adhered to when interacting with AI systems. Sensitive data never get leaked outside." }
-    end;
-    subgraph DATAResponsibility["What is expected of the stakeholder"]
-        DATAResponsibility_@{ shape: "rect", label: "Understands the underlying data and provides input for classifying it into the right categories." }
-    end;
-    
-    DATAUser & DATADesc ~~~ DATAExpectation & DATAResponsibility
-
-    classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:Bold
-    </code></pre></td>
-    <td width="50%"><pre lang="mermaid"><code>flowchart
-    DADMUser([Data administrator])
-    class DADMUser User_DADM
-    DADMDesc@{ shape: "text", label: "The data administrator controls the data that is directly queried/ exposed for consumption by an AI application." }
-    subgraph DADMExpectation["What the stakeholder expects"]
-        DADMExpectation_@{ shape: "rect", label: "Following the best practices sufficiently safeguards the data from misuse by the AI app." }
-    end;
-    subgraph DADMResponsibility["What is expected of the stakeholder"]
-        DADMResponsibility_@{ shape: "rect", label: "Data is classified correctly and data access governance for individuals or service accounts follow the usual governance." }
-    end;
-
-    DADMUser & DADMDesc ~~~ DADMExpectation & DADMResponsibility
-
-    classDef User_DADM stroke:Blue, fill:Blue, color: White, font-family:Arial, font-weight:Bold
-    </code></pre></td>
+    <td width="50%"><img src=".assets/User_DataSteward.svg" alt="Data Steward" /></td>
+    <td width="50%"><img src=".assets/User_DataAdmin.svg" alt="Data admin" /></td>
   </tr>
   <tr width="100%">
-    <td width="50%"><pre lang="mermaid"><code>flowchart
-    COEUser([AI-CoE])
-    class COEUser User_COE
-    COEDesc@{ shape: "text", label: "The team that is responsible to craft and maintain the company's AI Adoption strategy. They also monitor value realization from past projects and accordingly update best practices. This team is made of representatives from IT, Legal, Business, Cybersecurity, Risk & Compliance etc." }
-    subgraph COEExpectation["What the stakeholder expects"]
-        COEExpectation_@{ shape: "rect", label: "The senior leadership supports the adoption of the governance approach proposed by the AI-CoE." }
-    end;
-    subgraph COEResponsibility["What is expected of stakeholder"]
-        COEResponsibility_@{ shape: "rect", label: "Formulate org- wide policies and build safeguards to use AI in a safe and efficient manner." }
-    end;
-
-    COEUser & COEDesc ~~~ COEExpectation & COEResponsibility
-
-    classDef User_COE stroke:Black, fill:Black, color: White, font-family:Arial, font-weight:Bold
-    </code></pre></td>
-    <td width="50%"><pre lang="mermaid"><code>flowchart
-    SoRADMUser([SoR administrator])
-    class SoRADMUser User_SoRADM
-    SoRADMDesc@{ shape: "text", label: "The administrator (typically, in the IT function) of the business apps, typically System of Records, used directly by business users to track activities inside the company." }
-    subgraph SoRADMExpectation["What the stakeholder expects"]
-        SoRADMExpectation_@{ shape: "rect", label: "User-level access controls configured in the app are respected even when the data leaves the system." }
-    end;
-    subgraph SoRADMResponsibility["What is expected of the stakeholder"]
-        SoRADMResponsibility_@{ shape: "rect", label: "Provide inputs for which data can be accessed by which user/ role." }
-    end;
-
-    SoRADMUser & SoRADMDesc ~~~ SoRADMExpectation & SoRADMResponsibility
-
-    classDef User_SoRADM stroke:Magenta, fill:Magenta, color: White, font-family:Arial, font-weight:Bold
-    </code></pre></td>
+    <td width="50%"><img src=".assets/User_CoE.svg" alt="AI- CoE" /></td>
+    <td width="50%"><img src=".assets/User_SorAdmin.svg" alt="SoR admin" /></td>
   </tr>
 </table>
 
