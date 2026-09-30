@@ -33,15 +33,7 @@ Artificial intelligence is advancing at an ever- accelerating pace. Break- throu
 ## The conflicting reality
 As may be seen from the use cases above, deriving the true value from AI requires it to first assimilate facts from a wide range of data sources as well as sufficiently large samples of data in those sources, eventually yielding results that are holistic in nature. If an organization has not yet created an AI adoption strategy, it is likely that they are yet to strike the right balance between conflicting forces that push them to either adopt AI or exercise caution against it. 
 
-``` mermaid
-kanban
-    Pros[<h3>Factors favoring AI adoption</h3>]
-        [<span style="font-size:xx-large">👑</span><p>Leadership push</p>]
-        [<span style="font-size:xx-large">🧑‍💻</span><p>Enthusiastic citizen developers</p>]
-    Cons[<h3>Factors warranting caution</h3>]
-        [<span style="font-size:xx-large">🗗</span><p>Heterogenous application landscape</p>]
-        [<span style="font-size:xx-large">⁉️</span><p>Unprepared for governance</p>]
-```
+<img src=".assets/ConflictingReality.svg" alt="Conflicting Reality" />
 
 * **Leadership push**. The senior management are coerced by their shareholders to demonstrate "competitiveness" or adopt a more "tech- embracing attitude" with respect to their peers. 
 * **Enthusiastic citizen developers**. Frontline workers in the business have had a positive experience with AI and are raring to create or use even more tools to enhance their productivity. 
@@ -54,8 +46,8 @@ The following table lays out the primary participants in the AI adoption strateg
 
 <table cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" width="1000%" height="1000%"/></td>
-    <td><img src=".assets/User_BusinessUser.svg" alt="Business user" width="1000%" height="1000%"/></td>
+    <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" /></td>
+    <td><img src=".assets/User_BusinessUser.svg" alt="Business user" /></td>
   </tr>
   <tr>
     <td><pre lang="mermaid"><code>flowchart
