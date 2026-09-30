@@ -10,6 +10,7 @@ The focus therefore shifts towards "managing" this innovation and productivity b
 - [The main stakeholders](#the-main-stakeholders)
 - [The basic principles (or rules)](#the-basic-principles-or-rules)
     - [Data governance](#data-governance)
+    - [Updates or actions on the SoRs](#updates-or-actions-on-the-sors)
     - [App lifecycle](#app-lifecycle)
     - [AI governance](#ai-governance)
 - [The core components](#the-core-components)
@@ -77,7 +78,7 @@ Let us list out the simplest set of principles which will drive how the AI adopt
 * **Unified data catalog** A centralized data- gateway also maintains the catalog for the data contained in it, so potential users may find out the exact data points that they need access to, and may place access requests in the source SoR systems accordingly.
 * **Avoid license multiplexing**. Some vendors like [Microsoft](https://www.microsoft.com/en-us/licensing/product-licensing/power-platform) may place restrictions on use of data by user accounts lacking appropriate licenses when the data has been extracted from the SoR apps in a non- standard way. This may impact how the data- gateway is designed. Check this with your SoR vendor.
 
-### Data updates or actions triggered on the SoRs
+### Updates or actions on the SoRs
 * **Human in the loop**. All updates by the app to other SoR apps must be approved by the business user and registered as having been performed by that user's credential. This way the audit logs native to the SoR app would show the data as modified by the user and thus, the user is still held accountable for the outcome of the app use.
 * **No direct SoR update**. Apps must not bypass the business validation logic already present in the SoR when updating data inside it. In other words, citizen developers should only create apps that interact with SoRs using _standard_ user interface or Apis in the respective SoR, and not create apps native to the SoR that can potentially update their underlying database directly. Vibe- coded Apps native to specific SoRs typically require a _deployment_ step on the SoR and are out of the scope of the AI adoption coverage here; they must follow the usual route of IT approvals.
 
