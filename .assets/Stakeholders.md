@@ -1,6 +1,6 @@
 ``` mermaid
 flowchart TB
-    %%{init: { "flowchart": { "nodeSpacing": 20, "rankSpacing": 30 }}}%%
+    %%{init: { "flowchart": { "nodeSpacing": 20, "rankSpacing": 1 }}}%%
 
     subgraph row1[ ]
         direction LR
