@@ -106,8 +106,8 @@ flowchart TB
     CoE ~~~ SorAdmin
     row1 ~~~ row2 ~~~ row3
 
-    classDef Row stroke:none, fill:transparent
-    classDef Cell stroke:Black, fill:transparent
+    classDef Row stroke: White, fill: White
+    classDef Cell stroke: Black, fill: White
     classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:Bold
     classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:Bold
     classDef User_DATA stroke:Orange, fill:Orange, font-family:Arial, color:Black, font-weight:Bold
