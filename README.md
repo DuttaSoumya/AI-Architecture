@@ -47,16 +47,16 @@ The following table lays out the primary participants in the AI adoption strateg
 
 <table cellspacing="0" cellpadding="0" width="100%">
   <tr width="100%">
-    <td width="50%"><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" /></td>
-    <td width="50%"><img src=".assets/User_BusinessUser.svg" alt="Business user" /></td>
+    <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" /></td>
+    <td><img src=".assets/User_BusinessUser.svg" alt="Business user" /></td>
   </tr>
   <tr width="100%">
-    <td width="50%"><img src=".assets/User_DataSteward.svg" alt="Data Steward" /></td>
-    <td width="50%"><img src=".assets/User_DataAdmin.svg" alt="Data admin" /></td>
+    <td><img src=".assets/User_DataSteward.svg" alt="Data Steward" /></td>
+    <td><img src=".assets/User_DataAdmin.svg" alt="Data admin" /></td>
   </tr>
   <tr width="100%">
-    <td width="50%"><img src=".assets/User_CoE.svg" alt="AI- CoE" /></td>
-    <td width="50%"><img src=".assets/User_SorAdmin.svg" alt="SoR admin" /></td>
+    <td><img src=".assets/User_CoE.svg" alt="AI- CoE" /></td>
+    <td><img src=".assets/User_SorAdmin.svg" alt="SoR admin" /></td>
   </tr>
 </table>
 
