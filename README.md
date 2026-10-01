@@ -60,9 +60,9 @@ The following table lays out the primary participants in the AI adoption strateg
   </tr>
 </table>
 
-<table>
+<table cellspacing="0" cellpadding="0">
   <tr>
-    <td>![]("/.assets/User_CitizenDeveloper.svg" "Citizen developer")</td>
+    <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" /></td>
     <td><img src=".assets/User_BusinessUser.svg" alt="Business user" /></td>
   </tr>
 </table>
