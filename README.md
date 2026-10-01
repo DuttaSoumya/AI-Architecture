@@ -60,6 +60,9 @@ The following table lays out the primary participants in the AI adoption strateg
   </tr>
 </table>
 
+<img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" />
+<img src=".assets/User_SorAdmin.svg" alt="SoR admin" />
+
 ## The basic principles (or rules)
 
 Let us list out the simplest set of principles which will drive how the AI adoption strategy should be articulated. You may wish to evaluate the applicability of each of these principles to your organization and thereby craft a custom strategy for your own use. A degree of healthy skepticism is a good thing when an organization is considering building a strategy around the use of AI. Quite a few examples of autonomous agents have been seen to actively pursue creative means to bypass the governance limits imposed on traditional systems. Simply put, AI is a new beast and even its creators are advocating for vigilance when using it. There is no reason, therefore for an organization to put its guards down, which is why the principles outlined below should be periodically reviewed and honed over time.
