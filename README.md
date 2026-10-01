@@ -45,6 +45,46 @@ As may be seen from the use cases above, deriving the true value from AI require
 
 The following table lays out the primary participants in the AI adoption strategy. While most of the stakeholders may be familiar, the AI- Center of Excellence (AI-CoE) team may be a new construct and needs to be formed in a matrixed way comprising of representatives from multiple functions.
 
+``` mermaid
+flowchart TB
+    subgraph row1[ ]
+        direction LR
+        subgraph CitizenDeveloper[ ]
+            CitizenDev(["Citizen developer"])
+            class CitizenDev User_CTZ
+            CTZDesc@{ shape: "text", label: "The frontline worker who uses AI and creates applications for an individual or a team to increase productivity." }
+            subgraph CTZExpectation["What the stakeholder expects"]
+                CTZExpectation_@{ shape: "rect", label: "Clear directions to follow so that the app thus created is safe and performs optimally." }
+            end;
+            subgraph CTZResponsibility["What is expected of the stakeholder"]
+                CTZResponsibility_@{ shape: "rect", label: "Creates applications based on best practices outlined by the AI-CoE while taking appropriate approvals whenever required." }
+            end;
+
+            CitizenDev & CTZDesc ~~~ CTZExpectation & CTZResponsibility
+
+            classDef User_CTZ stroke:LightBlue, fill:LightBlue, font-family:Arial, color:Black, font-weight:Bold
+        end;
+        subgraph BusinessUser[ ]
+            BizUser([Business user])
+            class BizUser User_BIZ
+            BIZDesc@{ shape: "text", label: "The business user who is going to use the app created by the citizen developer." }
+            subgraph BIZExpectation["What the stakeholder expects"]
+                BIZExpectation_@{ shape: "rect", label: "The app is easy to use and works well. In case of obvious inaccuracies in the AI- created suggestions, it is possible to provide (hopefully in-app) feedback to improve it." }
+            end;
+            subgraph BIZResponsibility["What is expected of the stakeholder"]
+                BIZResponsibility_@{ shape: "rect", label: "AI suggestions to change any system of record data are always vetted by this person, who remains accountable for converting the suggestion into actions or data updates." }
+            end;
+
+            BizUser & BIZDesc ~~~ BIZExpectation & BIZResponsibility
+
+            classDef User_BIZ stroke:Pink, fill:Pink, font-family:Arial, color:Black, font-weight:Bold
+        end;
+    end;
+    subgraph row2[ ]
+        direction LR
+    end;
+```
+
 <table cellspacing="0" cellpadding="0" width="100%">
   <tr width="100%">
     <td><img src=".assets/User_CitizenDeveloper.svg" alt="Citizen developer" /></td>
