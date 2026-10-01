@@ -45,7 +45,7 @@ As may be seen from the use cases above, deriving the true value from AI require
 
 The following table lays out the primary participants in the AI adoption strategy. While most of the stakeholders may be familiar, the AI- Center of Excellence (AI-CoE) team may be a new construct and needs to be formed in a matrixed way comprising of representatives from multiple functions.
 
--to add-
+<img src=".assets/Stakeholders.svg" alt="Stakeholders" />
 
 ## The basic principles (or rules)
 
