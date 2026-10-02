@@ -110,7 +110,7 @@ All of the data is held behind the data- gateway to prevent direct exposure to A
 
 <img src=".assets/OrganizationData.svg" alt="Organization data" />
 
-[Text too tiny? [Open the image fully.](.assets/OrganizationData.svg)]
+[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/Authoring-the-first-draft/.assets/OrganizationData.svg)]
 
 
 ### AI project hub
@@ -120,7 +120,7 @@ The project hub is the collection of all apps and agents built by the citizen de
 
 <img src=".assets/AiProjectHub.svg" alt="AI Project hub" />
 
-[Text too tiny? [Open the image fully.](.assets/AiProjectHub.svg)]
+[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/raw/refs/heads/Authoring-the-first-draft/.assets/AiProjectHub.svg)]
 
 
 ### AI gateway
@@ -128,14 +128,15 @@ The apps or agents using generative AI require to be managed to control the data
 
 <img src=".assets/AiGateway.svg" alt="AI Gateway" />
 
-[Text too tiny? [Open the image fully.](.assets/AiGateway.svg)]
+[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/raw/refs/heads/Authoring-the-first-draft/.assets/AiGateway.svg
+)]
 
 ## The full architecture
 Let us combine the stakeholders, the components and the principles derived together in a unified diagram so that all interactions become visible. The natural next steps is to evaluate your organization readiness for each node and edge in this diagram and thereafter make a plan of action for the missing parts. 
 
 <img src=".assets/FullArchitecture.svg" alt="Full Architecture" />
 
-[Text too tiny? [Open the image fully.](.assets/FullArchitecture.svg)]
+[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/raw/refs/heads/Authoring-the-first-draft/.assets/FullArchitecture.svg)]
 
 
 
