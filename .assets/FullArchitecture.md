@@ -160,7 +160,7 @@ flowchart
     ExternalLLMNeeded <-. interacts .-> CoE
     ExternalLLMNeeded -- Approved. Creates application --> Apps
 
-    GoldenSystemOfRecord -- securely provides data based on the app user's credential --> AIProject
+    GoldenSystemOfRecord -- securely provides data based on the app user's credential --> Apps
     DataClassifications -- dictates --> RedactPolicies
     UnmanagedData -- <b>RISKY! NOT IT SUPPORTED.</b> --> LLMProj
     DataLlmSuite <-. interacts, for sensitive data .-> InternalModel
