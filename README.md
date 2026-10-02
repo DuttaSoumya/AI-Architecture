@@ -98,7 +98,7 @@ Let us list out the simplest set of principles which will drive how the AI adopt
 * **Internal LLM**. If an organization is concerned about token costs, sensitivity of the data that the LLM processes, or using overly complicated apps for simple AI tasks, an internal LLM stationed on- premises is a great alternative to using online vendor- provided LLM alternatives.
 
 ## The core components
-The core components in an AI adoption strategy may then be classified into the following groups.
+The core components in an AI adoption strategy may then be classified into the following groups. You may directly go to [the AI adoption architecture](#the-full-architecture) to get the full picture.
 
 ### Organization data
 Organization data can be classified into 3 categories
