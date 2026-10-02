@@ -110,6 +110,8 @@ All of the data is held behind the data- gateway to prevent direct exposure to A
 
 <img src=".assets/OrganizationData.svg" alt="Organization data" />
 
+[Text too tiny? [Open the image fully.](.assets/OrganizationData.svg)]
+
 
 ### AI project hub
 The project hub is the collection of all apps and agents built by the citizen developers that addresses the different types of [use cases](#common-ai-uses) as explained previously. Having these collected in a single repository helps in applying the [app lifecycle principles](#app-lifecycle) uniformly. The following diagram describes
@@ -118,17 +120,22 @@ The project hub is the collection of all apps and agents built by the citizen de
 
 <img src=".assets/AiProjectHub.svg" alt="AI Project hub" />
 
+[Text too tiny? [Open the image fully.](.assets/AiProjectHub.svg)]
+
+
 ### AI gateway
 The apps or agents using generative AI require to be managed to control the data churned by the external models and also the expense incurred out of token usage. In addition, all calls are to be logged so the interactions can be audited. Such logs can also function as a test scenarios ([AI evals](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)) for future improvements to the apps.
 
 <img src=".assets/AiGateway.svg" alt="AI Gateway" />
 
+[Text too tiny? [Open the image fully.](.assets/AiGateway.svg)]
 
 ## The full architecture
 Let us combine the stakeholders, the components and the principles derived together in a unified diagram so that all interactions become visible. The natural next steps is to evaluate your organization readiness for each node and edge in this diagram and thereafter make a plan of action for the missing parts. 
 
 <img src=".assets/FullArchitecture.svg" alt="Full Architecture" />
 
+[Text too tiny? [Open the image fully.](.assets/FullArchitecture.svg)]
 
 
 
