@@ -14,13 +14,13 @@ flowchart
         class ApprovalsForExternalLlms Database
         TokenUseApproved@{ shape: diamond, label: "?" }
         ExternalLLMApproved@{ shape: diamond, label: "?" }
-        CallLogAsEvals@{ shape: cyl, label: "Call logs with details: <ol><li>. request</li><li>. response</li><li>. token cost</li><li>. user acceptance of AI suggestion</li></ol>" }
+        CallLogAsEvals@{ shape: cyl, label: "Call logs with details: app, request, response, token cost, user feedback of AI suggestion" }
         class CallLogAsEvals Database
         subgraph MakeCall[Query LLM]
              RedactData[Redact/ omit sensitive data]
              class RedactData Action
              PlaceCall[Place call]
-             GathersUserFeedback[Gathers user feedback, <ul><li>. by detecting extent to which user adopts suggestion,</li><li>. or, by explicitly asking user in the app.</li></ul>]
+             GathersUserFeedback[Gathers user feedback, either by asking user or by assessing adoption of the AI suggestion.]
              class GathersUserFeedback Action
              RedactData --> PlaceCall --> GathersUserFeedback
              class PlaceCall Action

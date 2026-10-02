@@ -93,9 +93,9 @@ flowchart
             class Chatbot AiApps
         end;
         style Apps color:blue, font-family:Fantasy, Trebuchet MS
-        AppCatalog@{ shape: doc, label: "Catalog of projects, illustrations of how best practices have been applied." }
+        AppCatalog@{ shape: doc, label: "Catalog of projects, illustrations of how best practices are applied." }
         class AppCatalog AiArtifacts
-        AppMetrics@{ shape: doc, label: "Dashboard of usage of apps and user confidence in it, based on evals being logged." }
+        AppMetrics@{ shape: doc, label: "Dashboard of usage of apps and user confidence in it, based on logged evals." }
         class AppMetrics AiArtifacts
         MustUpdateManagedApp@{ shape: diamond, label: "?" }
         UpdateApprovedByUser@{ shape: diamond, label: "?" }
@@ -119,13 +119,13 @@ flowchart
         class ApprovalsForExternalLlms Database
         TokenUseApproved@{ shape: diamond, label: "?" }
         ExternalLLMApproved@{ shape: diamond, label: "?" }
-        CallLogAsEvals@{ shape: cyl, label: "Call logs with details: <ol><li>. request</li><li>. response</li><li>. token cost</li><li>. user acceptance of AI suggestion</li></ol>" }
+        CallLogAsEvals@{ shape: cyl, label: "Call logs with details: app, request, response, token cost, user feedback of AI suggestion" }
         class CallLogAsEvals Database
         subgraph MakeCall[Query LLM]
              RedactData[Redact/ omit sensitive data]
              class RedactData Action
              PlaceCall[Place call]
-             GathersUserFeedback[Gathers user feedback, <ul><li>. by detecting extent to which user adopts suggestion,</li><li>. or, by explicitly asking user in the app.</li></ul>]
+             GathersUserFeedback[Gathers user feedback, either by asking user or by assessing adoption of the AI suggestion.]
              class GathersUserFeedback Action
              RedactData --> PlaceCall --> GathersUserFeedback
              class PlaceCall Action

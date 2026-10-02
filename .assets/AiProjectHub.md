@@ -17,9 +17,9 @@ flowchart
             class Chatbot AiApps
         end;
         style Apps color:blue, font-family:Fantasy, Trebuchet MS
-        AppCatalog@{ shape: doc, label: "Catalog of projects, illustrations of how best practices have been applied." }
+        AppCatalog@{ shape: doc, label: "Catalog of projects, illustrations of how best practices are applied." }
         class AppCatalog AiArtifacts
-        AppMetrics@{ shape: doc, label: "Dashboard of usage of apps and user confidence in it, based on evals being logged." }
+        AppMetrics@{ shape: doc, label: "Dashboard of usage of apps and user confidence in it, based on logged evals." }
         class AppMetrics AiArtifacts
         SourceControl@{ shape: cyl, label: "Source control for apps" }
         class SourceControl Database
