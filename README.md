@@ -1,5 +1,5 @@
 
-# Crafting a governance strategy when democratizing AI adoption in an enterprise
+#  Democratize Enterprise AI: Scaling Innovation Safely
 Artificial intelligence has already proven itself immensely impactful in the way organizations operate today. Unlike prior technological advances, its **easy adoption**, **short time- to- value realization** and **versatility of application** are paving the way for citizen developers to create useful applications themselves. This empowers the business users who now automate workflows, add functionality atop their favorite applications, get targeted queries answered across multiple datasets almost instantaneously and on their own, without the need for a traditional IT function. On one hand, this brings in flexibility and speed to the activities inside an organization, but on the other hand, it raises the risk of unmanaged data leaks and excessive expenses incurred because of unfettered usage.
 
 The focus therefore shifts towards "managing" this innovation and productivity boom so that an organization can encourage greater adoption of AI amongst its business users while being confident of preventing any potential misuse. This article summarizes the considerations that must be applied when creating an AI adoption strategy while anticipating and overcoming the unexpected "gotchas" in a fair- sized enterprise. 
