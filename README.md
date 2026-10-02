@@ -47,6 +47,8 @@ The following table lays out the primary participants in the AI adoption strateg
 
 <img src=".assets/Stakeholders.svg" alt="Stakeholders" />
 
+<small>[[Expand image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/Stakeholders.svg)]</small>
+
 ## The basic principles (or rules)
 
 Let us list out the simplest set of principles which will drive how the AI adoption strategy should be articulated. You may wish to evaluate the applicability of each of these principles to your organization and thereby craft a custom strategy for your own use. A degree of healthy skepticism is a good thing when an organization is considering building a strategy around the use of AI. Quite a few examples of autonomous agents have been seen to actively pursue creative means to bypass the governance limits imposed on traditional systems. Simply put, AI is a new beast and even its creators are advocating for vigilance when using it. There is no reason, therefore for an organization to put its guards down, which is why the principles outlined below should be periodically reviewed and honed over time.
@@ -108,9 +110,9 @@ Organization data can be classified into 3 categories
 
 All of the data is held behind the data- gateway to prevent direct exposure to AI apps or agents.
 
-<img src=".assets/OrganizationData.svg" alt="Organization data" />
+<img src=".assets/OrganizationData.svg" alt="Structure of Organization data" />
 
-[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/Authoring-the-first-draft/.assets/OrganizationData.svg)]
+<small>[[Expand image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/OrganizationData.svg)]</small>
 
 
 ### AI project hub
@@ -120,7 +122,7 @@ The project hub is the collection of all apps and agents built by the citizen de
 
 <img src=".assets/AiProjectHub.svg" alt="AI Project hub" />
 
-[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/raw/refs/heads/Authoring-the-first-draft/.assets/AiProjectHub.svg)]
+<small>[[Expand image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/AiProjectHub.svg)]</small>
 
 
 ### AI gateway
@@ -128,15 +130,14 @@ The apps or agents using generative AI require to be managed to control the data
 
 <img src=".assets/AiGateway.svg" alt="AI Gateway" />
 
-[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/raw/refs/heads/Authoring-the-first-draft/.assets/AiGateway.svg
-)]
+<small>[[Expand image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/AiGateway.svg)]</small>
 
 ## The full architecture
 Let us combine the stakeholders, the components and the principles derived together in a unified diagram so that all interactions become visible. The natural next steps is to evaluate your organization readiness for each node and edge in this diagram and thereafter make a plan of action for the missing parts. 
 
 <img src=".assets/FullArchitecture.svg" alt="Full Architecture" />
 
-[Text too tiny? [Open the image fully.](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/raw/refs/heads/Authoring-the-first-draft/.assets/FullArchitecture.svg)]
+<small>[[Expand image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture.svg)]</small>
 
 
 
