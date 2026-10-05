@@ -1,8 +1,8 @@
 
-#  Democratize Enterprise AI: Scaling Innovation Safely
+# Democratize Enterprise AI: a solution architecture to scale innovation safely
 Artificial intelligence has already proven itself immensely impactful in the way organizations operate today. Unlike prior technological advances, its **easy adoption**, **short time- to- value realization** and **versatility of application** are paving the way for citizen developers to create useful applications themselves. This empowers the business users who now automate workflows, add functionality atop their favorite applications, get targeted queries answered across multiple datasets almost instantaneously and on their own, without the need for a traditional IT function. On one hand, this brings in flexibility and speed to the activities inside an organization, but on the other hand, it raises the risk of unmanaged data leaks and excessive expenses incurred because of unfettered usage.
 
-The focus therefore shifts towards "managing" this innovation and productivity boom so that an organization can encourage greater adoption of AI amongst its business users while being confident of preventing any potential misuse. This article summarizes the considerations that must be applied when creating an AI adoption strategy while anticipating and overcoming the unexpected "gotchas" in a fair- sized enterprise. 
+The focus therefore shifts towards "managing" this innovation and productivity boom so that an organization can encourage greater adoption of AI amongst its business users while being confident of preventing any potential misuse. This article summarizes the considerations that must be applied when creating an AI adoption strategy while anticipating and overcoming the unexpected "gotchas" in a fair- sized enterprise, ending with [a diagram](#the-full-architecture) for how systems participating in the AI ecosystem should be structured so that they interact with one another in the most optimal way. 
 
 ##### Table of Contents  
 - [Common AI uses](#common-ai-uses)
