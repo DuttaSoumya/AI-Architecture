@@ -179,7 +179,6 @@ flowchart
     GoldenSystemOfRecord -. incremental updates to keep internal LLM in sync .-> InternalModel
     LLMProj -- Yes. External LLM needed? --> ExternalLLMApproved
     AppMetrics -. pulls data from .-> CallLogAsEvals
-    GoldenSystemOfRecord ~~~ InternalModel
 
     BizUser -. gives feedback for the AI suggestion .-> GathersUserFeedback
 
