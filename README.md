@@ -135,9 +135,9 @@ The apps or agents using generative AI require to be managed to control the data
 ## The full architecture
 Let us combine the stakeholders, the components and the principles derived together in a unified diagram so that all interactions become visible. The natural next steps is to evaluate your organization readiness for each node and edge in this diagram and thereafter make a plan of action for the missing parts. 
 
-<img src=".assets/FullArchitecture.svg" alt="Full Architecture" />
+<img src=".assets/FullArchitecture-Landscape.svg" alt="Full Architecture" />
 
-[Expand [original image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture- Landscape.svg) or View [elongated version](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture- Portrait.svg)]
+[Expand [original image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture-Landscape.svg) or View [elongated version](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture-Portrait.svg)]
 
 
 
