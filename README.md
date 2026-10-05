@@ -137,7 +137,7 @@ Let us combine the stakeholders, the components and the principles derived toget
 
 <img src=".assets/FullArchitecture.svg" alt="Full Architecture" />
 
-[[Expand image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture.svg)]
+[Expand [original image](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture- Landscape.svg) or View [elongated version](https://raw.githubusercontent.com/DuttaSoumya/AI-Architecture/refs/heads/main/.assets/FullArchitecture- Portrait.svg)]
 
 
 
