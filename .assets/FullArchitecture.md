@@ -1,4 +1,8 @@
 ``` mermaid
+---
+config:
+  layout: elk
+---
 flowchart 
     subgraph Legend[**LEGEND**]
         direction TB
