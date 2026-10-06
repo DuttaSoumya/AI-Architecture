@@ -85,7 +85,7 @@ flowchart TB
         end;
         class CoE Cell
         subgraph SorAdmin[ ]
-            SoRADMUser([SoR administrator])
+            SoRADMUser([SoR admin])
             class SoRADMUser User_SoRADM
             SoRADMDesc@{ shape: "text", label: "The administrator (typically, in the IT function) of the business apps, typically System of Records, used directly by business users to track activities inside the company." }
             subgraph SoRADMExpectation["What the stakeholder expects"]

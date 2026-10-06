@@ -57,7 +57,7 @@ flowchart
             Procurement@{ shape: h-cyl, label: "Procurement" }
             SupportSystem@{ shape: h-cyl, label: "Business Support" }
             Pricing@{ shape: h-cyl, label: "Pricing" }
-            SoRADMUser([SoR administrator])
+            SoRADMUser([SoR admin])
             class SoRADMUser User_SoRADM
             SoRAccessControl@{ shape: cyl, label: "Access control" }
             class SoRAccessControl Database
