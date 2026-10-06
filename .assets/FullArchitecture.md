@@ -75,7 +75,7 @@ flowchart
         style Unstructured color:blue, font-family:Fantasy, Trebuchet M
         subgraph UnmanagedData[Unmanaged data]
             PrivateEmail@{ shape: h-cyl, label: "Private emails" }
-            Extract@{ shape: h-cyl, label: "Data extracts from managed systems" }
+            Extract@{ shape: h-cyl, label: "Data dumps from managed systems" }
         end
         style UnmanagedData color:blue, font-family:Fantasy, Trebuchet MS
 
@@ -84,6 +84,7 @@ flowchart
         SoRAccessControl -- dictates --> DGAccessControl
         Unstructured -. export files on creation/ update .-> GoldenSystemOfRecord
         DataAdmin -- maintains --> DataCatalog
+        Organized -- extracted --> Extract
     end
     style CompanyData stroke:None, fill:#f7e0c6, color:blue, font-family:Fantasy, Trebuchet MS
 
@@ -152,7 +153,7 @@ flowchart
     end
     style AIGateway stroke:None, fill:#f8ebfa, color:blue, font-family:Fantasy, Trebuchet MS
 
-    Legend ~~~ CompanyData 
+    Legend ~~~ CompanyData & AIGateway & AIProject
     BizUser ~~~ CitizenDev
 
     CitizenDev -. references .-> BestPractices & DataCatalog
